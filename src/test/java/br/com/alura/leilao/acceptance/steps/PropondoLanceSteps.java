@@ -36,16 +36,22 @@ public class PropondoLanceSteps {
 		Assert.assertEquals(BigDecimal.TEN, leilao.getLances().get(0).getValor());
 	}
 	
-	@Dado("varios lances validos")
-	public void varios_lances_validos() {
-		
-		Usuario usuario0 = new Usuario("Fulano");
-		lance10 = new Lance(usuario0, BigDecimal.ONE);
-		
-		Usuario usuario1 = new Usuario("Bertrano");
-		lance100 = new Lance(usuario1, new BigDecimal("100.00"));
-		
-		leilao = new Leilao("Carros 10");
+//	@Dado("varios lances validos")
+//	public void varios_lances_validos() {
+//		
+//		Usuario usuario0 = new Usuario("Fulano");
+//		lance10 = new Lance(usuario0, BigDecimal.ONE);
+//		
+//		Usuario usuario1 = new Usuario("Beltrano");
+//		lance100 = new Lance(usuario1, new BigDecimal("100.00"));
+//		
+//		leilao = new Leilao("Carros 10");
+//	}
+	
+	@Dado("um lance de {double} real do usuario {string}")
+	public void um_lance_de_real_do_usuario_fulano(Double valor, String nome) {
+		System.out.println(valor);
+		System.out.println(nome);
 	}
 
 	@Quando("propoe varios lances ao leilao")

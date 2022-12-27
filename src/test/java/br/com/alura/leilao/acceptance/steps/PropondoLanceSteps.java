@@ -24,12 +24,11 @@ public class PropondoLanceSteps {
 	public void setup() {
 		this.lista = new ArrayList<Lance>();
 		leilao = new Leilao("Carros 10");
-		System.out.println("Antes!");
 	}
 	
 	@After
 	public void tearDown() {
-		System.out.println("Depois");
+		
 	}
 
 	@Dado("um lance valido")
@@ -67,5 +66,12 @@ public class PropondoLanceSteps {
 		Assert.assertEquals(this.lista.get(0).getValor(), leilao.getLances().get(0).getValor());
 		Assert.assertEquals(this.lista.get(1).getValor(), leilao.getLances().get(1).getValor());
 	}
+	
+	@Dado("um lance invalido de {double} real")
+	public void um_lance_invalido_de_real(Double valor) {
+		System.out.println(valor);
+	}
+	
+	
 
 }

@@ -12,3 +12,14 @@ Cenario: Propondo varios lances validos
 	E um lance de 100.0 real do usuario "beltrano"
 	Quando propoe varios lances ao leilao
 	Entao os lances sao aceitos
+	
+Esquema do Cenario: um lance invalido
+	Dado um lance invalido de <valor> real
+	Quando propoe ao leilao
+	Entao o lance nao eh aceito
+
+Exemplos:
+    | valor |
+    |    0 |
+    |    -1 | 
+	

@@ -22,4 +22,12 @@ Exemplos:
     | valor | Beltrano |
     |    0  | Fulano   |
     |    -1 | Ciclano  |
-	
+
+Cenario: Propondo uma sequencia de lances
+	Dado dois lances
+	    | valor    | nome    |
+    	|    1.0   | fulano  |
+    	|    100.0 | fulano  |
+	Quando propoe varios lances ao leilao
+	Entao o segundo lance nao eh aceito
+	    

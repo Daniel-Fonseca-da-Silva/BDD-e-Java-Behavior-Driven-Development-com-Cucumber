@@ -14,12 +14,12 @@ Cenario: Propondo varios lances validos
 	Entao os lances sao aceitos
 	
 Esquema do Cenario: um lance invalido
-	Dado um lance invalido de <valor> real
-	Quando propoe ao leilao
+	Dado um lance invalido de <valor> real e do '<usuario>'
+	Quando propoe o lance ao leilao
 	Entao o lance nao eh aceito
 
 Exemplos:
-    | valor |
-    |    0 |
-    |    -1 | 
+    | valor | Beltrano |
+    |    0  | Fulano   |
+    |    -1 | Ciclano  |
 	
